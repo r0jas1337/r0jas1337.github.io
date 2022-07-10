@@ -1,5 +1,16 @@
+/*
+Thanks for:
+    - Google
+    - StackOverflow
+    - jQuery
+    - jQuery Marquee
+    - animate.css
+
+*/
+
 'use strict';
 
+const ipgeolocation = 'https://api.ipgeolocation.io/ipgeo?apiKey=1785ed53312f42c7b5ef89f65c3faa1a';
 
 const timeouts = [];
 
@@ -9,19 +20,15 @@ $(document).ready(() => {
   const links = [
     {
       name: 'Rojas',
-      link: 'koslows',
+      link: 'J8m4jzvPY9',
     },
     {
-      name: 'ilias',
-      link: '8JYh3cPuPK',
+      name: 'nexus',
+      link: 'nexus-rp',
     },
     {
-      name: 'Manager',
-      link: '8JYh3cPuPK',
-    },
-    {
-      name: 'Koslows',
-      link: 'koslows',
+      name: 'pose',
+      link: '8m4jzvPY9',
     },
   ];
 
@@ -41,7 +48,7 @@ $(document).ready(() => {
     app.shouldIgnoreVideo = true;
   }
 
-  app.titleChanger(['rojasxilias', 'RaX AntiCheat', 'Song name: t-low - WE MADE IT']);
+  app.titleChanger(['rojas', 'holzkopf#1337']);
   app.iconChanger(['assets/icons/roses/rose1.jpg', 'assets/icons/roses/rose2.jpg', 'assets/icons/roses/rose3.jpg', 'assets/icons/roses/rose4.jpg', 'assets/icons/roses/rose5.jpg', 'assets/icons/roses/rose6.jpg', 'assets/icons/roses/rose7.jpg', 'assets/icons/roses/rose8.jpg', 'assets/icons/roses/rose1.jpg']);
 });
 
@@ -117,10 +124,43 @@ const writeLine = (text, speed, timeout, callback) => {
   }, timeout);
 };
 
+$.getJSON(ipgeolocation, (data) => {
+  writeLine(['Authenticating...', "Granting access to <span style='font-size: 14px; color: #06d;'>[unknown]</span>..."], 30, () => {
+    if (app.skippedIntro) return;
 
+    clearCursor();
+
+    const usernames = ['user', 'dude'];
+
+    const ip = data.ip ? data.ip : usernames[Math.floor(Math.random() * usernames.length)];
+    const country = data.country_name ? data.country_name : 'your country';
+
+    writeLine([`Access granted! <span style='font-size: 14px; color: #0f0;'>[success]</span>`, `Welcome back, <i style='color: #0f0'>${ip}</i>! By the way, nice to see someone from ${country} here!`], 30, 500, () => {
+      if (app.skippedIntro) return;
+
+      clearCursor();
+
+      writeLine([`<i style='color: #F62459'>miraii.net $$$</i>`], 120, 500, () => {
+        timeouts.push(
+          setTimeout(() => {
+            if (app.skippedIntro) return;
+
+            clearCursor();
+
+            setTimeout(() => {
+              skipIntro();
+            }, 500);
+          }, 1000)
+        );
+      });
+    });
+  });
+});
 
 const skipIntro = () => {
   if (app.skippedIntro) return;
+
+  app.skippedIntro = true;
 
   timeouts.forEach((timeout) => {
     clearTimeout(timeout);

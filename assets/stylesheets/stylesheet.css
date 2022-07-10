@@ -27,6 +27,24 @@ input {
   background-color: #000;
 }
 
+
+
+.button {
+	background-color: none;
+	border: 1px solid white;
+	color: rgb(255, 255, 255);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+  }
+
 @font-face {
   font-family: courier_regular;
   src: url('../others/Consolas.ttf');
@@ -67,6 +85,8 @@ input {
   background-color: #000;
 }
 
+
+
 .box {
   padding: 15px;
   width: 100%;
@@ -76,8 +96,9 @@ input {
 
 .top-right {
   position: absolute;
-  top: 0;
-  right: 5px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
 }
 
 .container {
@@ -165,10 +186,10 @@ input {
   right: 5px;
 }
 
-.trollface-light {
-  -webkit-filter: invert(100%);
-  -moz-filter: invert(100%);
-  -ms-filter: invert(100%);
+.footer_left {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
 }
 
 ::-webkit-scrollbar {

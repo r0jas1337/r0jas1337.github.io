@@ -2,13 +2,13 @@ class _app {
   id = 0;
   videoElement = null;
   audioElement = null;
-  musicVolume = 0.32;
-  musicFadeIn = 5000;
+  musicVolume = 0.12;
+  musicFadeIn = 4000;
   skippedIntro = false;
   backgroundToggler = false;
   shouldIgnoreVideo = false;
   effects = ['bounce', 'flash', 'pulse', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'jello'];
-  brandDescription = ['rojas', 'RaX AntiCheat', 'koslow', 'rp kid', 'amateur dev', 'iliasxrojas'];
+  brandDescription = ['nachts wach', 'revive crimelife pls', 'discord.gg/nexus-rp', 'holzkopf#1337'];
 
   titleChanger = (text, delay) => {
     if (!text) return;
