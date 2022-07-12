@@ -8,7 +8,7 @@ class _app {
   backgroundToggler = false;
   shouldIgnoreVideo = false;
   effects = ['bounce', 'flash', 'pulse', 'rubberBand', 'shake', 'swing', 'tada', 'wobble', 'jello'];
-  brandDescription = ['nachts wach', 'revive crimelife pls', 'bald kommt mehr hier hin..', 'holzkopf#1337'];
+  brandDescription = ['nachts wach', 'revive crimelife pls', 'bald kommt mehr hier hin..', "dc : 'holzkopf#1337"];
 
   titleChanger = (text, delay) => {
     if (!text) return;
